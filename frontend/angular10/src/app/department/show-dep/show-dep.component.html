@@ -1,0 +1,84 @@
+<!-- Button trigger modal -->
+<div class="d-flex justify-content-end">
+  <button
+    type="button"
+    class="btn btn-primary mt-2 mb-2"
+    data-bs-toggle="modal"
+    data-bs-target="#departmentModal"
+    (click)="add()"
+  >
+    Create new Department
+  </button>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="departmentModal"
+  tabindex="-1"
+  aria-labelledby="DepartmentLabel"
+  aria-hidden="true"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="DepartmentLabel">
+          {{ ModalTitle }}
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeModal()"
+          id="closeButton"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <app-add-edit-dep
+          [Department]="Department"
+          (DepartmentUpdated)="listUpdated()"
+          *ngIf="ActivateEditComponent"
+        ></app-add-edit-dep>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="text-center">ID</th>
+      <th>Department Name</th>
+      <th class="text-end">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let department of DepartmentList">
+      <td class="small text-muted text-center">
+        <i>#{{ department.DepartmentId }}</i>
+      </td>
+      <td>{{ department.DepartmentName }}</td>
+      <td class="text-end">
+        <button
+          type="button"
+          class="btn btn-sm btn-light mx-1"
+          data-bs-toggle="modal"
+          data-bs-target="#departmentModal"
+          (click)="update(department)"
+        >
+          Edit
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-light"
+          (click)="delete(department.DepartmentId)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

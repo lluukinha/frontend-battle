@@ -1,0 +1,30 @@
+<div class="mb-3">
+  <label for="department_name_input" class="form-label">
+    Department Name
+  </label>
+  <input
+    id="department_name_input"
+    type="text"
+    class="form-control"
+    [(ngModel)]="DepartmentName"
+    placeholder="Enter Department Name"
+  />
+</div>
+
+<div class="d-flex justify-content-end">
+  <button
+    class="btn btn-primary"
+    *ngIf="Department.DepartmentId == 0"
+    (click)="addDepartment()"
+  >
+    Add Department
+  </button>
+
+  <button
+    class="btn btn-primary"
+    *ngIf="Department.DepartmentId != 0"
+    (click)="editDepartment()"
+  >
+    Edit Department
+  </button>
+</div>

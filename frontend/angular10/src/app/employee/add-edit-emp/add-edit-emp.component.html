@@ -1,0 +1,90 @@
+<div class="mb-1 d-flex justify-content-center">
+  <label for="photo_input" class="form-label">
+    <img
+      [src]="profileSourceUrl()"
+      class="img-fluid img-thumbnail rounded thumb"
+    />
+  </label>
+</div>
+
+<div
+  class="mb-3 d-flex justify-content-center"
+  *ngIf="PhotoFileName != 'anonymous.png'"
+>
+  <button (click)="removePhoto()" class="btn btn-light">
+    Remove Photo
+  </button>
+</div>
+
+<div class="mb-3">
+  <label for="employee_name_input" class="form-label">
+    Employee Name
+  </label>
+  <input
+    id="employee_name_input"
+    type="text"
+    class="form-control"
+    [(ngModel)]="EmployeeName"
+    placeholder="Enter Employee Name"
+  />
+</div>
+
+<div class="mb-3">
+  <label for="employee_department_select" class="form-label">
+    Department
+  </label>
+  <select
+    id="employee_department_select"
+    [(ngModel)]="DepartmentId"
+    class="form-control"
+  >
+    <option
+      *ngFor="let department of DepartmentList"
+      [ngValue]="department.DepartmentId"
+    >
+      {{ department.DepartmentName }}
+    </option>
+  </select>
+</div>
+
+<div class="mb-3">
+  <label for="date_of_joining_input" class="form-label">
+    Date of Joining
+  </label>
+  <input
+    type="date"
+    class="form-control"
+    id="date_of_joining_input"
+    [(ngModel)]="DateOfJoining"
+  />
+</div>
+
+<div class="mb-3">
+  <label for="photo_input" class="form-label">
+    Profile Photo
+  </label>
+  <input
+    type="file"
+    class="form-control"
+    id="photo_input"
+    (change)="uploadPhoto($event)"
+  />
+</div>
+
+<div class="d-flex justify-content-end">
+  <button
+    class="btn btn-primary"
+    *ngIf="Employee.EmployeeId == 0"
+    (click)="addEmployee()"
+  >
+    Add Employee
+  </button>
+
+  <button
+    class="btn btn-primary"
+    *ngIf="Employee.EmployeeId != 0"
+    (click)="editEmployee()"
+  >
+    Update Employee
+  </button>
+</div>
