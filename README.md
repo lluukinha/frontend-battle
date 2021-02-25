@@ -6,6 +6,7 @@ To test it locally, I think the frontend part would be easy. But the backend wou
 
 # Backend
 
+The backend was made with **.NET Core Web Api & SQL Server** .
 You will need to install **VS Studio 2019**, **Sql Server** and **SSMS (Sql Server Management Studio)** .
 After everything being installed, open the **Sql Server** and run the **.sql** file attached on this repository to create the database and necessary tables.
 After that just open the **VS Studio** project and start the debug will be enough to run.
