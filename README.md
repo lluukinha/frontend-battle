@@ -1,6 +1,6 @@
 # Welcome to Frontend-Battle!
 
-Hi! Recently i was needing to study **C#** in order to create a simple backend api using **Sql Server** on the database side. After finishing it, i was thinking... What would be the best frontend framework to do this project?
+Hi! Recently I was needing to study **C#** in order to create a simple backend api using **Sql Server** on the database side. After finishing it, I was thinking... What would be the best frontend framework to do this project?
 As I am doing this **C#** project to study, I decided to create the frontend in the three most popular frameworks, so its made on **Angular 11**, **React** and **Vue**.
 To test it locally, I think the frontend part would be easy. But the backend would need some work to do.
 
@@ -13,7 +13,7 @@ After that just open the **VS Studio** project and start the debug will be enoug
 
 # Frontend
 
-As i am a professional **VueJs** developer, i assume **React** and **Angular** projects would need some refactor from most experienced developers, but for this project i thought was simple enough to use the particulatities from each framework.  
+As I am a professional **VueJs** developer, I assume **React** and **Angular** projects would need some refactor from most experienced developers, but for this project I thought was simple enough to use the particulatities from each framework.  
 I was able to use Props, Emits, run initial method (mounted, ngInit, componentDidMount) and I used Axios on React and Vue to do HTTP Requests, in Angular, it was not needed because the framework delivers a very good HTTP service inside it.
 
 ##### Dont forget to do `npm install` in each one of them.
