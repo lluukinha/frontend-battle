@@ -10,7 +10,7 @@ You will need to install **VS Studio 2019**, **Sql Server** and **SSMS (Sql Serv
 After everything being installed, open the **Sql Server** and run the **.sql** file attached on this repository to create the database and necessary tables.
 After that just open the **VS Studio** project and start the debug will be enough to run.
 
-## Frontend
+# Frontend
 
 As i am a professional **VueJs** developer, i assume **React** and **Angular** projects would need some refactor from most experienced developers, but for this project i thought was simple enough to use the particulatities from each framework.
 I was able to use Props, Emits, run initial method (mounted, ngInit, componentDidMount) and I used Axios on React and Vue to do HTTP Requests, in Angular, it was not needed because the framework delivers a very good HTTP service inside it.
